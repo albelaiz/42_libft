@@ -6,13 +6,12 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:46:20 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 16:07:51 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/10/29 16:20:51 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-  #include <string.h>
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t		j;
@@ -25,15 +24,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	to_find = (char *)needle;
 	if (to_find[0] == '\0')
 		return ((char *)&str[j]);
-	while(str[j] && j < len)
+	while (str[j] && j < len)
 	{
 		k = 0;
-		while(str[j + k] == to_find[k] && j + k < len)
+		while (str[j + k] == to_find[k] && j + k < len)
 		{
- 
 			k++;
 			if (to_find[k] == '\0')
-				return ((char *)&str[j]);		
+				return ((char *)&str[j]);
 		}
 		j++;
 	}
@@ -43,5 +41,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	char a[] = "alaebelaiz";
 // 	char b = '\0';
 // 	printf("%s\n",strnstr(a,&b,5));
-	
 // }
