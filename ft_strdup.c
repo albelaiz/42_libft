@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 18:02:43 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/02 13:38:32 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/01 11:37:30 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/01 13:28:11 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	if (n == 0)
-		return ;
-	ft_memset(s, 0, n);
+	int		len;
+	char	*ptr;
+	int		i;
+
+	i = 0;
+	len = ft_strlen(s1);
+	ptr = (char *)(malloc(len + 1));
+	if (ptr == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 // int main(){
-//     char a[] = "alaebilaizi";
-//     // Print string 9bel bzero
-//     printf("9bel: %s\n", a);
-//     // Apply bzero
-//     ft_bzero(a, 5);
-//     // Print string men be3d bzero
-//     printf("men be3d: %s\n", a);
-//     return 0;
+// 	char a[] = "alae";
+// 	char *dup = strdup(a);
+// 	if (dup != NULL){
+// 	printf("%s",dup);
+// 	free(dup);
+// 	}
+// 	return 0;
 // }

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 18:02:43 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/02 13:38:32 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/01 13:29:31 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/02 13:43:01 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t cont, size_t size)
 {
-	if (n == 0)
-		return ;
-	ft_memset(s, 0, n);
+	void	*ptr;
+
+	if (cont == 0 || size == 0)
+		return (NULL);
+	ptr = malloc(cont * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, cont * size);
+	return (ptr);
 }
-// int main(){
-//     char a[] = "alaebilaizi";
-//     // Print string 9bel bzero
-//     printf("9bel: %s\n", a);
-//     // Apply bzero
-//     ft_bzero(a, 5);
-//     // Print string men be3d bzero
-//     printf("men be3d: %s\n", a);
-//     return 0;
+// int	main(void)
+// {
+// 	char *str = ft_calloc(5 ,sizeof(int));
+// 	printf("%s\n",str);
+
 // }
