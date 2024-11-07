@@ -6,13 +6,13 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:45:37 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 11:17:16 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:40:34 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	int		i;
 	char	tofind;
@@ -24,7 +24,7 @@ char	*ft_strchr(char *str, int c)
 	while (str[i] != '\0')
 	{
 		if (str[i] == tofind)
-			return (&str[i]);
+			return ((char *)&str[i]);
 		i++;
 	}
 	return (0);

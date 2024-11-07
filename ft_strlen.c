@@ -6,15 +6,15 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:11:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 11:18:53 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:26:44 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen( const char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
@@ -23,8 +23,8 @@ int	ft_strlen( const char *str)
 	}
 	return (i);
 }
-// #include <stdio.h>
-// int main(){
-//    char a[] = "alae";
-//    printf("%d",ft_strlen(a));
+// int	main(void)
+// {
+// 	char a[] = "alae";
+// 	printf("%zu", ft_strlen(a));
 // }

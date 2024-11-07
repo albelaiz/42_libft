@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 13:43:17 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 15:40:26 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/05 09:19:04 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/05 17:14:02 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void ft_striteri(char *s, void (*f)(unsigned int,char*))
 {
-	char	*dst;
-	size_t	len_s;
-	size_t	i;
-
-	i = 0;
-	len_s = ft_strlen(s);
-	dst = (char *)malloc(len + 1);
-	if (!s)
-		return (NULL);
-	if (start + len > len_s)
-		return (NULL);
-	while (i < len)
-	{
-		dst[i] = s[start + i];
+	int i = 0;
+	while (s[i]){
+		f(i,&s[i]);
 		i++;
 	}
-	return (dst);
 }
-// int	main(void)
-// {
-// 	char	a[] = "alaebelaizi";
-
-// 	printf("%s", ft_substr(a, 5, 5));
+// void to_upper(unsigned int i, char *c) {
+//     if (*c >= 'a' && *c <= 'z') {
+//         *c = *c - 32;
+//     }
+// }
+// int main(){
+// 	char a[] = "hello";
+// 	ft_striteri(a, to_upper);
+// 	printf("%s\n", a);
 // }

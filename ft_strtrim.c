@@ -1,40 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 13:43:17 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 15:40:26 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/04 12:01:14 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/04 16:17:56 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dst;
-	size_t	len_s;
-	size_t	i;
+	int		i;
+	int		j;
+	int		size;
+	char	*str;
+	int		k;
 
+	j = strlen(s1) - 1;
 	i = 0;
-	len_s = ft_strlen(s);
-	dst = (char *)malloc(len + 1);
-	if (!s)
+	while (s1[i] && strchr(set, s1[i]))
+		i++;
+	while (j >= i && strchr(set, s1[j]))
+		j--;
+	str = malloc(j - i + 1);
+	if (!str)
 		return (NULL);
-	if (start + len > len_s)
-		return (NULL);
-	while (i < len)
+	k = 0;
+	while (i <= j)
 	{
-		dst[i] = s[start + i];
+		str[k] = s1[i];
+		k++;
 		i++;
 	}
-	return (dst);
+	str[k] = '\0';
+	return (str);
 }
 // int	main(void)
 // {
-// 	char	a[] = "alaebelaizi";
+// 	char	a[] = "abMy name is Simonbbaaabba";
+// 	char	b[] = "ab";
 
-// 	printf("%s", ft_substr(a, 5, 5));
+// 	printf("%s", ft_strtrim(a, b));
+// 	return (0);
 // }

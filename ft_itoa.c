@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 13:43:17 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 15:40:26 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/06 12:39:09 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/07 10:44:12 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char *ft_itoa(int n)
 {
-	char	*dst;
-	size_t	len_s;
-	size_t	i;
+	char *str;
+	int i = 0;
+	int nb = n;
 
-	i = 0;
-	len_s = ft_strlen(s);
-	dst = (char *)malloc(len + 1);
-	if (!s)
-		return (NULL);
-	if (start + len > len_s)
-		return (NULL);
-	while (i < len)
+	while (nb > 0)
 	{
-		dst[i] = s[start + i];
+		nb = bn / 10;
 		i++;
 	}
-	return (dst);
+	str = (char *)malloc(i + 1);
+	
 }
-// int	main(void)
-// {
-// 	char	a[] = "alaebelaizi";
-
-// 	printf("%s", ft_substr(a, 5, 5));
-// }

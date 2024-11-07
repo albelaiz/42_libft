@@ -1,40 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 13:43:17 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 15:40:26 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/04 11:10:14 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/04 12:00:43 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	int		i;
+	int		j;
 	char	*dst;
-	size_t	len_s;
-	size_t	i;
 
 	i = 0;
-	len_s = ft_strlen(s);
-	dst = (char *)malloc(len + 1);
-	if (!s)
+	j = 0;
+	dst = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (dst == NULL)
 		return (NULL);
-	if (start + len > len_s)
-		return (NULL);
-	while (i < len)
+	while (s1[i] != '\0')
 	{
-		dst[i] = s[start + i];
+		dst[i] = s1[i];
 		i++;
 	}
+	while (s2[j] != '\0')
+	{
+		dst[i] = s2[j];
+		j++;
+		i++;
+	}
+	dst[i] = '\0';
 	return (dst);
 }
 // int	main(void)
 // {
-// 	char	a[] = "alaebelaizi";
+// 	char	a[] = "alae";
+// 	char	b[] = "belaizi";
 
-// 	printf("%s", ft_substr(a, 5, 5));
+// 	printf("%s", ft_strjoin(a, b));
+// 	return (0);
 // }
