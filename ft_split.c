@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:08:09 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/09 17:08:01 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/09 20:34:49 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,81 +41,66 @@ static int	contword(char const *str, char sip)
 
 static void	ft_free(char **src, int j)
 {
-	while (j >= 0){
+	while (j >= 0)
+	{
 		free(src[j]);
-    }
+		j--;
+	}
 	free(src);
 }
 
-static char	**len_word(char **src, char const *str, char c)
+static char	**len_word(char **src, const char *str, char c)
 {
-	int	i;
-	int	start;
+	int		i;
+	int		j;
+	size_t	start;
 
 	i = 0;
+	j = 0;
+	while (str[i])
+	{
+		start = 0;
 		while (str[i] && str[i] == c)
 			i++;
-			*start = i;
-			while (str[i] != '\0' && str[i] != c)
-				i++;
-	return ( i - *start);
-}
-static char *copy_word(char *str , int len)
-{
-    int i = 0;
-    char *dts;
-    dst = malloc(len + 1);
-    if (!dst)
-        return(NULL);
-    while (i < len){
-        dst[i] = str[i];
-        i++;
-    }
-    dst[i] = '\0';
-    return (dst);
+		while (str[i + start] && str[i + start] != c)
+			start++;
+		if (start > 0)
+		{
+			src[j] = malloc(sizeof(char) * (start + 1));
+			if (!src[j])
+				return (ft_free(src, j), NULL);
+			ft_strlcpy(src[j++], &str[i], start + 1);
+		}
+		i += start;
+	}
+	src[j] = NULL;
+	return (src);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		len;
 	char	**str;
+	int		i;
 
+	i = 0;
 	if (!s)
 		return (NULL);
 	len = contword(s, c);
 	str = (char **)malloc((len + 1) * sizeof(char *));
 	if (!str)
 		return (NULL);
-    str[len] = NULL;
-    len = 0;    
-    while (*s)
-    {
-        while (*s && *s == c)
-            s++;
-        if (*s && *s != c)
-        {
-            len = len_word(s, c);
-            str[i] = copy_word(s, len);
-            if (!str[i])
-            {
-                ft_free(str, i);
-                return (NULL);
-            }
-            i++;
-            s += len;
-        }
-    }
 	return (len_word(str, s, c));
 }
 
-int	main(void)
-{
-    int i = 0;
-	char **result = ft_split("Hello world this is a test", ' ');
-	while (result[i])
-	{
-		printf("%s\n", result[i]);
-		i++;
-	}
-	return (0);
-}
+// int	main(void)
+// {
+// 	int i = 0;
+// 	char **result = ft_split("Hello world this is a test", ' ');
+// 	while (result[i])
+// 	{
+// 		printf("%s\n", result[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
