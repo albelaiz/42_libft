@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:01:14 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 16:17:56 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:33:54 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[k] = '\0';
 	return (str);
 }
-// int	main(void)
-// {
-// 	char	a[] = "abMy name is Simonbbaaabba";
-// 	char	b[] = "ab";
-
-// 	printf("%s", ft_strtrim(a, b));
-// 	return (0);
-// }

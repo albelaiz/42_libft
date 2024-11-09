@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:38:18 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 10:35:10 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:35 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,3 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
-//#include<stdio.h>
-//int main(){
-//    int a = 's';
-//    printf("%d",ft_isdigit(a));
-//}

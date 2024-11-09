@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 02:22:25 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 10:46:05 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:22 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-// int main(){
-//     char a[] = "alaebelaiz";
-//     int i = 5;
-//     printf("%s",memchr(a,'b',i));
-// }

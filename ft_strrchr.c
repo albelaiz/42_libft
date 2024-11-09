@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:56:41 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 11:25:20 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:31:26 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-// int main(){
-// 	char a[] = "alae";
-// 	char b = 'a';
-// 	printf("%s",ft_strrchr(a,b));
-// }

@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:10:44 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 11:26:59 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:31:10 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-//#include<stdio.h>
-//int main(){
-//    char a = 'a';
-//    printf("%c",ft_toupper(a));
-//}

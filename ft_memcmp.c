@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:45:21 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 10:52:56 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:18 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (st1[i] - st2[i]);
 }
-// int main(){
-// 	char a[]= "alae";
-// 	char b[] = "alae";
-// 	printf("%d",ft_memcmp(a,b,4));
-// }

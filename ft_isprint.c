@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:53:15 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 10:39:21 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:32 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,3 @@ int	ft_isprint(int c)
 	}
 	return (0);
 }
-// int main(){
-//     char a = '\0';
-//     printf("%d",ft_isprint(a));
-// }

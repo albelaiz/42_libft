@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:11:33 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 11:08:14 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:13 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ void	*ft_memset(void *ptr, int value, size_t num)
 	}
 	return (ptr);
 }
-// int main(){
-//     char a[] = "alaebelaizi";
-//     char b = '.';
-//     int num = 20;
-//     printf("%s",ft_memset(a,b,num));
-// }

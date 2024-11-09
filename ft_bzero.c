@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 18:02:43 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/02 13:38:32 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:48 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ void	ft_bzero(void *s, size_t n)
 		return ;
 	ft_memset(s, 0, n);
 }
-// int main(){
-//     char a[] = "alaebilaizi";
-//     // Print string 9bel bzero
-//     printf("9bel: %s\n", a);
-//     // Apply bzero
-//     ft_bzero(a, 5);
-//     // Print string men be3d bzero
-//     printf("men be3d: %s\n", a);
-//     return 0;
-// }

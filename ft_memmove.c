@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:18:08 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 09:39:19 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:27:14 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		ft_memcpy(s1, s2, n);
 	return (dst);
 }
-// int	main(void)
-// {
-// 	char a[] = "alae";
-// 	printf("%s", ft_memmove(a + 2, a, 2));
-// }

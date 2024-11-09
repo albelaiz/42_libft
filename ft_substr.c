@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 13:43:17 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 15:40:26 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:34:08 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (dst);
 }
-// int	main(void)
-// {
-// 	char	a[] = "alaebelaizi";
-
-// 	printf("%s", ft_substr(a, 5, 5));
-// }

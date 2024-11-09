@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 11:37:30 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/01 13:28:11 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:28:55 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ char	*ft_strdup(const char *s1)
 	ptr[i] = '\0';
 	return (ptr);
 }
-// int main(){
-// 	char a[] = "alae";
-// 	char *dup = strdup(a);
-// 	if (dup != NULL){
-// 	printf("%s",dup);
-// 	free(dup);
-// 	}
-// 	return 0;
-// }

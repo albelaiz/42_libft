@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:46:57 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 10:33:31 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:41 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,3 @@ int	ft_isalnum(int c)
 	}
 	return (0);
 }
-//#include<stdio.h>
-//int main(){
-//    int  a = '.';
-//    printf("%d",ft_isalnum(a));
-//}

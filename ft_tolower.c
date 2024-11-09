@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:04:56 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 11:26:34 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:31:13 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-//#include<stdio.h>
-//int main(){
-//    char a = 'A';
-//    printf("%c",ft_tolower(a));
-//}

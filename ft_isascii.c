@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:12:25 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 10:38:42 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:37 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,3 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
-// int main(){
-//     int i = 128;
-//     printf("%d",ft_isascii(i));
-// }

@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:42:57 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/30 19:16:39 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:52 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (r * g);
 }
-// int main(){
-// 	char a[] = " -+--2545ale2";
-// 	printf("%d",ft_atoi(a));	
-// }

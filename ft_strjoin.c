@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 11:10:14 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/04 12:00:43 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:31:57 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	dst[i] = '\0';
 	return (dst);
 }
-// int	main(void)
-// {
-// 	char	a[] = "alae";
-// 	char	b[] = "belaizi";
-
-// 	printf("%s", ft_strjoin(a, b));
-// 	return (0);
-// }

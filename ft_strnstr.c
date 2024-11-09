@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:46:20 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/10/29 16:20:51 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:31:31 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-// int main(){
-// 	char a[] = "alaebelaiz";
-// 	char b = '\0';
-// 	printf("%s\n",strnstr(a,&b,5));
-// }

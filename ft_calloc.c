@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 13:29:31 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/02 13:43:01 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:32:45 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,3 @@ void	*ft_calloc(size_t cont, size_t size)
 	ft_bzero(ptr, cont * size);
 	return (ptr);
 }
-// int	main(void)
-// {
-// 	char *str = ft_calloc(5 ,sizeof(int));
-// 	printf("%s\n",str);
-
-// }
