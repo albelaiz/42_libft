@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:01:14 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/08 16:33:54 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/09 21:12:36 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	int		size;
 	char	*str;
 	int		k;
 
