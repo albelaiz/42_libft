@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:39:09 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/10 17:48:20 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:12:47 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,8 @@ static int	ft_len_n(int n)
 	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (1);
 	if (n < 0)
-	{
 		i++;
-		n = n * -1;
-	}
 	while (n != 0)
 	{
 		n = n / 10;
@@ -34,34 +29,28 @@ static int	ft_len_n(int n)
 
 char	*ft_itoa(int n)
 {
+	size_t		i;
 	char	*str;
-	int		i;
-	long	nb;
 
-	nb = n;
+	if (n == 0)
+		return (ft_strdup("0"));
+	else if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	i = ft_len_n(n);
-	str = (char *)malloc(i + 1);
+	str = (char *)malloc((i + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	str[i] = '\0';
-
-	if (nb < 0)
-		str[0] = '-';
-	nb = nb * -1;
-	if (nb >= 10)
+	if (n < 0)
 	{
-		while (nb > 0)
-		{
-			str[i - 1] = nb % 10 + 48;
-			nb = nb / 10;
-			i--;
-		}
+		n = n * -1;
+		str[0] = '-';
+	}
+	str[i] = '\0';
+	while (n != 0)
+	{
+		i--;
+		str[i] = n % 10 + 48;
+		n = n / 10;
 	}
 	return (str);
-}
-int main()
-{
-	int n = 0;
-	printf("%s\n", ft_itoa(n));
-	return (0);
 }
