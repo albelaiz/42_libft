@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:39:09 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/08 16:29:49 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:48:20 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
-	int		nb;
+	long	nb;
 
 	nb = n;
 	i = ft_len_n(n);
@@ -44,8 +44,7 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	str[i] = '\0';
-	if (nb == -2147483648)
-		return (ft_strdup("-2147483648"));
+
 	if (nb < 0)
 		str[0] = '-';
 	nb = nb * -1;
@@ -59,4 +58,10 @@ char	*ft_itoa(int n)
 		}
 	}
 	return (str);
+}
+int main()
+{
+	int n = 0;
+	printf("%s\n", ft_itoa(n));
+	return (0);
 }

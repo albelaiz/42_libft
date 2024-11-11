@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:56:41 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/08 16:31:26 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/10 13:32:04 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ char	*ft_strrchr(const char *str, int c)
 
 	tofind = (char)c;
 	len = ft_strlen(str);
-	i = len - 1;
-	if (tofind == '\0')
-		return ((char *)&str[i]);
+	i = len;
 	while (i >= 0)
 	{
 		if (str[i] == tofind)
-			return ((char *)&str[i]);
+			return ((char *)str + i);
 		i--;
 	}
 	return (NULL);

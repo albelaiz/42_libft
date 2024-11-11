@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:08:09 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/09 20:34:49 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/10 12:59:00 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,12 @@ static int	contword(char const *str, char sip)
 	return (cont);
 }
 
-static void	ft_free(char **src, int j)
+static void	*ft_free(char **src, int j)
 {
-	while (j >= 0)
-	{
+	while (--j >= 0)
 		free(src[j]);
-		j--;
-	}
 	free(src);
+	return (NULL);
 }
 
 static char	**len_word(char **src, const char *str, char c)
@@ -68,7 +66,7 @@ static char	**len_word(char **src, const char *str, char c)
 		{
 			src[j] = malloc(sizeof(char) * (start + 1));
 			if (!src[j])
-				return (ft_free(src, j), NULL);
+				return (ft_free(src, j));
 			ft_strlcpy(src[j++], &str[i], start + 1);
 		}
 		i += start;
