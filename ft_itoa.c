@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:39:09 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/11 21:12:47 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/12 13:40:03 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_len_n(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t		i;
+	size_t	i;
 	char	*str;
 
 	if (n == 0)

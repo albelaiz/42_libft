@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:08:09 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/10 12:59:00 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/11 21:31:18 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,15 +90,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (len_word(str, s, c));
 }
-
-// int	main(void)
-// {
-// 	int i = 0;
-// 	char **result = ft_split("Hello world this is a test", ' ');
-// 	while (result[i])
-// 	{
-// 		printf("%s\n", result[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }
