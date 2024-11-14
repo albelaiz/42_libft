@@ -6,20 +6,20 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:21:46 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/13 20:51:17 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/14 19:53:19 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *tmp;
-	
+	t_list	*tmp;
+
 	tmp = lst;
 	while (tmp)
 	{
-		f(tmp -> content);
-		tmp = tmp -> next;
+		f(tmp->content);
+		tmp = tmp->next;
 	}
 }
