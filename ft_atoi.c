@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:42:57 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/10 14:01:42 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:48:14 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		r = r * 10 + (str[i] - 48);
+		if (r > LLONG_MAX && g == 1)
+			return (-1);
+		if (r > LLONG_MAX && g == -1)
+			return (0);
 		i++;
 	}
 	return (r * g);

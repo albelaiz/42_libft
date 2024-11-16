@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 12:45:25 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/14 19:53:00 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/16 12:59:12 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = str;
 	}
-	free(*lst);
+	*lst = NULL;
 }

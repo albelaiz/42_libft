@@ -25,10 +25,12 @@ bonus: $(OBJB)
 %.o: %.c libft.h 
 		$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
+clean: 
 		rm -f $(OB) $(OBJB)
 
 fclean: clean
 		rm -f $(NAME) 
+
 re: fclean all
 
+.PHONY: clean

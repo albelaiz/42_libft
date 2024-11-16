@@ -6,13 +6,13 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 12:01:14 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/10 13:34:32 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:54:26 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_in_set(char c, char const *set)
+static int	is_in_set(char c, char const *set)
 {
 	int	i;
 
@@ -31,8 +31,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	start;
 	int	end;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
+	if (s1[0] == '\0')
+		return (ft_strdup(""));
 	start = 0;
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
