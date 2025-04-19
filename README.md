@@ -36,19 +36,19 @@ gcc my_program.c -L. -lft -o my_program
 ## **📂 Functions List**  
 
 ### **1️⃣ Standard Libc Functions**  
-| Function       | Description                      |  
+| Function       | Description                     |  
 |---------------|----------------------------------|  
-| `ft_memset`   | Fills memory with a constant byte |  
+| `ft_memset`   | Fills memory with a constant byte|  
 | `ft_strlen`   | Computes string length           |  
-| `ft_atoi`     | Converts string to integer       |  
+| `ft_atoi`     | Converts string to integer       |
+| `ft_split`    | Splits string by delimiter       |
 | ...           | ...                              |  
 
 ### **2️⃣ Additional Functions** *(Bonus)*  
-| Function          | Description                      |  
+| Function          | Description                     |  
 |------------------|----------------------------------|  
-| `ft_lstnew`      | Creates a new linked list node   |  
-| `ft_printf`      | Custom printf implementation     |  
-| `ft_split`       | Splits string by delimiter       |  
+| `ft_lstnew`      | Creates a new linked list node   |
+|...               | ..                               |
 
 *(Full list in `libft.h` header file.)*  
 
